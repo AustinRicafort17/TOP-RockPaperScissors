@@ -15,10 +15,9 @@ function GetComputerChoice (){
 }
 
 
-
 function GetHumanChoice (){
-    HumanChoice = prompt("Enter either 'rock', 'paper' or 'sciccors'")
-    return HumanChoice
+    choice = prompt("Enter either 'rock', 'paper' or 'sciccors'")
+    return choice
 }
 
 
@@ -27,6 +26,9 @@ let ComputerScore = 0
 
 
 function PlayRound(Human,Computer){
+
+    
+
 
 }
 
