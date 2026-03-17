@@ -1,38 +1,34 @@
-// 1 make a function that generates and poops out either "ROCK","PAPER" or "SCISSORS"
-// 2 make a promt
 
 
-function GenerateComputerChoice (){
-    return Math.floor(Math.random() * 3 ) + 1 ;
+function GetComputerChoice (){
+    result = Math.floor(Math.random() * 3 ) + 1 ;
+
+    if (result === 1){
+        return "ROCK"
+    }
+    else if (result === 2){
+        return "PAPER"
+    }
+    else if (result === 3){
+        return "SCISSORS"
+    }
 }
-
-
-let ComputerChoice = GenerateComputerChoice()
-
-    function getComputerChoice(){
-            if(ComputerChoice === 1){
-                return "ROCK"
-            }
-            else if (ComputerChoice === 2){
-                return "PAPER"
-            }
-            else if (ComputerChoice === 3){
-                return "SCISSORS"
-            }
-        }
-
-console.log(ComputerChoice)
-console.log(getComputerChoice())
-
 
 
 
 function GetHumanChoice (){
-
-
-
+    HumanChoice = prompt("Enter either 'rock', 'paper' or 'sciccors'")
+    return HumanChoice
 }
 
 
+let HumanScore = 0
+let ComputerScore = 0
 
 
+function PlayRound(Human,Computer){
+
+}
+
+const HumanChoice = GetHumanChoice()
+const ComputerChoice = GetComputerChoice()
