@@ -15,13 +15,14 @@ function GetComputerChoice (){
 function GetHumanChoice (){
     let choice = prompt("Enter either 'rock', 'paper' or 'sciccors'").toUpperCase()
 
-  while (choice !== "ROCK" && choice !== "PAPER" && choice !== "SCISSORS") {
-    alert("Not an option, Try again!");
-    choice = prompt("Enter either 'rock', 'paper' or 'scissors'").toUpperCase();
-  }
-        
+    if (choice == "ROCK" || choice == "PAPER" || choice == "SCISSORS"){
+        return choice
+    }
+    else if (choice !== "ROCK" && choice !== "PAPER" && choice !== "SCISSORS"){
+        alert("Not an option, Try one more time...");
+        return choice = prompt("Enter either 'rock', 'paper' or 'scissors'").toUpperCase();
+    }
 
-    return choice
 }
 
 
@@ -163,13 +164,13 @@ console.log(ComputerScore)
 
 function Scoreboard(){
     if(HumanScore > ComputerScore){
-        alert("YOU ->" + HumanScore + " COMPUTER ->" + ComputerScore + " You Win!" )
+        alert("YOU ->" + HumanScore + " COMPUTER ->" + ComputerScore + " Draws ->" + draw + " You Win!" )
     }
     else if(ComputerScore > HumanScore){
-        alert("YOU ->" + HumanScore + " COMPUTER ->" + ComputerScore + " You Lose!" )
+        alert("YOU ->" + HumanScore + " COMPUTER ->" + ComputerScore + " Draws ->" + draw + " You Lose!" )
     }
     else if (ComputerScore = HumanScore){
-        alert("YOU ->" + HumanScore + " COMPUTER ->" + ComputerScore + " It's a Draw!")
+        alert("YOU ->" + HumanScore + " COMPUTER ->" + ComputerScore + " Draws ->" + draw + " It's a Draw!")
     }
 }
 
