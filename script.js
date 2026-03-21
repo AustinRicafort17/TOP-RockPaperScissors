@@ -13,7 +13,14 @@ function GetComputerChoice (){
 }
 
 function GetHumanChoice (){
-    choice = prompt("Enter either 'rock', 'paper' or 'sciccors'").toUpperCase()
+    let choice = prompt("Enter either 'rock', 'paper' or 'sciccors'").toUpperCase()
+
+  while (choice !== "ROCK" && choice !== "PAPER" && choice !== "SCISSORS") {
+    alert("Not an option, Try again!");
+    choice = prompt("Enter either 'rock', 'paper' or 'scissors'").toUpperCase();
+  }
+        
+
     return choice
 }
 
@@ -25,30 +32,39 @@ function GetHumanChoice (){
 
 function PlayRound(Human,Computer){
     if (Human === "ROCK" && Computer === "ROCK"){
-        return "draw" ; alert("It's a DRAW!")
+        alert("It's a DRAW!")
+        return "draw"  
     }
     else if (Human === "ROCK" && Computer === "PAPER"){
-        return "ComputerWin" ; alert("You lose! paper beats rock")
+        alert("You lose! paper beats rock")
+        return "ComputerWin" ; 
     }
     else if (Human === "ROCK" && Computer === "SCISSORS" ){
-        return "HumanWin" ; alert("You Win! rock bears scissors")
+        alert("You Win! rock bears scissors")
+        return "HumanWin" ;
     }
     else if (Human === "PAPER" && Computer === "ROCK"){
+        alert("You Win! paper beats rock")
         return "HumanWin"
     }
     else if (Human === "PAPER" && Computer === "PAPER"){
+        alert("It's a DRAW!")
         return "draw"
     }
     else if (Human === "PAPER" && Computer === "SCISSORS"){
+        alert("You lose! scissors beat paper")
         return "ComputerWin"
     }
     else if (Human === "SCISSORS" && Computer === "ROCK"){
+        alert("You lose! rock beats scissors")
         return "ComputerWin"
     }
     else if (Human === "SCISSORS" && Computer === "PAPER"){
+        alert("You win! scissors beat paper")
         return "HumanWin"
     }
     else if (Human === "SCISSORS" && Computer === "SCISSORS"){
+        alert("It's a DRAW!")
         return "draw"
     }
 }
@@ -147,7 +163,14 @@ console.log(ComputerScore)
 
 function Scoreboard(){
     if(HumanScore > ComputerScore){
-        alert(HumanScore + "You Win!")
+        alert("YOU ->" + HumanScore + " COMPUTER ->" + ComputerScore + " You Win!" )
+    }
+    else if(ComputerScore > HumanScore){
+        alert("YOU ->" + HumanScore + " COMPUTER ->" + ComputerScore + " You Lose!" )
+    }
+    else if (ComputerScore = HumanScore){
+        alert("YOU ->" + HumanScore + " COMPUTER ->" + ComputerScore + " It's a Draw!")
     }
 }
 
+Scoreboard()
